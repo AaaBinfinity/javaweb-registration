@@ -9,7 +9,6 @@ import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.math.BigDecimal;
 
 /**
  * @author 郑为中
@@ -18,25 +17,14 @@ import java.math.BigDecimal;
 @Entity
 @DynamicInsert
 @DynamicUpdate
-@Table(name = "a_student")
-@TableName("a_student")
-@ApiModel(value = "学生")
-public class Student extends ZwzBaseEntity {
+@Table(name = "a_dynamic_table_data")
+@TableName("a_dynamic_table_data")
+@ApiModel(value = "动态表格值")
+public class DynamicTableData extends ZwzBaseEntity {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "姓名")
-    private String name;
+    @ApiModelProperty(value = "动态表格值标题")
+    private String title;
 
-    @ApiModelProperty(value = "性别")
-    private String sex;
-
-    @ApiModelProperty(value = "年龄")
-    private BigDecimal age;
-
-    @ApiModelProperty(value = "学号")
-    private String number;
-
-    @ApiModelProperty(value = "学校")
-    private String school;
 }

@@ -34,6 +34,9 @@ spring:
     port: 6379
     timeout: 3S
     password: Cb050328
+#  redis-cli
+#  CONFIG SET requirepass "Cb050328"
+
   servlet:
     multipart:
       max-file-size: 50MB
